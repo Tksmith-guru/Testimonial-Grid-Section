@@ -1,0 +1,180 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    background-color: hsl(210, 46%, 95%);
+}
+
+main {
+    width: 74%;
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: 300px 300px;
+    grid-template-areas: 
+    "cd1 cd1 cd2 cd3"
+    "cd4 cd5 cd5 cd3";
+    gap: 20px;
+}
+
+.group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    margin: 6px 0 6px 0;
+}
+
+.rht-align {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.cd1, .cd2, .cd3,
+.cd4, .cd5 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.cd1 {
+    grid-area: cd1;
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 20%;
+    background-size: auto 38%;
+}
+.cd2 {
+    grid-area: cd2;
+    background-color: hsl(217, 19%, 35%);
+}
+.cd3 {
+    grid-area: cd3;
+    background-color: hsl(0, 0%, 100%)
+}
+.cd4 {
+    grid-area: cd4;
+    background-color: hsl(0, 0%, 100%);
+}
+.cd5 {
+    grid-area: cd5;
+    background-color: hsl(219, 29%, 14%);
+}
+
+.cont {
+    box-shadow: 3px 0px 12px 5px rgba(207,207,207,0.75);
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    
+}
+
+h1 {
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    margin-top: 12px;
+}
+
+main .cd1 h1 {
+   margin-bottom: 20px;
+   color: hsl(0, 0%, 100%);
+}
+
+main .cd2 h1 {
+    color: hsl(0, 0%, 100%);
+}
+
+main .cd4 h1 {
+   width: 90%;
+}
+
+main .cd3 h1,
+main .cd4 h1 {
+    color: hsl(0, 0%, 41%);
+}
+
+main .cd5 h1 {
+   width: 100%;
+   color: hsl(0, 0%, 100%);
+}
+
+.p1,
+.p2,
+.p3  {
+    color: hsl(210, 46%, 95%);
+    font-weight: bold;
+}
+
+.p3 {
+    opacity: 70%;
+}
+
+.p2 {
+    font-size: 12px;
+}
+
+main .cd3 .p1, 
+main .cd4 .p1 {
+    color: hsl(0, 0%, 50%);
+}
+main .cd3 .p2, 
+main .cd4 .p2 {
+    color: hsl(0, 0%, 50%);
+}
+main .cd3 .p3, 
+main .cd4 .p3 {
+    color: hsl(0, 0%, 50%);
+}
+
+.p2 {
+    opacity: 50%;
+}
+
+p {
+    margin: 0;
+}
+
+@media only screen and (max-width:760px) {
+    body {
+        height: 100%;
+    }
+
+    main {
+        grid-template-areas: 
+    "cd1"
+    "cd2"
+    "cd4"
+    "cd5"
+    "cd3";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 90%;
+    height: 100%;
+    }
+
+    .cont {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 22px;
+        line-height: 24px;
+        width: 100%;
+    }
+}
