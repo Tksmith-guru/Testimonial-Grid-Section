@@ -9,7 +9,7 @@ body {
 }
 
 main {
-    width: 74%;
+    width: auto;
     display: grid;
     grid-template-columns: 300px 300px 300px 300px;
     grid-template-rows: 300px 300px;
